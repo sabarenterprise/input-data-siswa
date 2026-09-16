@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Anggaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Manajemen Anggaran</h1>
+
+        <!-- Input Pemasukan dan Pengeluaran-->
+         <div class="sub-container" id="sub-container-income">
+
+            <!-- Input Pemasukan -->
+             <div class="card" id="income-section">
+                <h3>Tambah Pemasukan</h3>
+                <div class="Input-group">
+                    <input type="text" id="income-source" placeholder="Masukkan sumber pemasukan">    
+                    <input type="number" id="income-amount" placeholder="Masukkan jumlah pemasukan">    
+                    <button id="add-income-button">Tambah Pemasukan</button>
+                </div>
+             </div>
+
+             <!-- Input Pengeuaran -->
+             <div class="card" id="expense-section">
+                <h3>Tambah Pengeluaran</h3>
+                <div class="Input-group">
+                    <input type="text" id="expense-title" placeholder="Masukkan nama pengeluaran">    
+                    <input type="number" id="expense-amount" placeholder="Masukkan jumlah pengeluaran">    
+                    <button id="add-expense-btn">Tambah Pengeluaran</button>
+                </div>
+             </div>   
+        </div>
+
+        <!-- Daftar Pemasukan dan Pengeluaran -->
+        <div class="lists-container">
+            <div class="list-section">
+                <h3>Daftar Pemasukan</h3>
+                <ul id="income-list"></ul>
+            </div>
+            <div class="list-section">
+                <h3>Daftar Pengeluaran</h3>
+                <ul id="expense-list"></ul>
+            </div>
+        </div>
+
+        <!-- Ringkasan Total -->
+        <div class="summary-container">
+            <div class="summary-box income-box">
+                <p>Total Pemasukan</p>
+                <h2 id="total-income">Rp 0</h2>
+            </div>
+            <div class="summary-box expense-box">
+                <p>Total Pengeluaran</p>
+                <h2 id="total-expense">Rp 0</h2>
+            </div>
+            <div class="summary-box balance-box">
+                <p>Selisih (Sisa Saldo)</p>
+                <h2 id="balance">Rp 0</h2>
+            </div>
+
+            <!-- Tombol Reset -->    
+            <button class="reset-btn" id="reset-btn">Reset Semua Data</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
